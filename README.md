@@ -3,12 +3,12 @@
 ## Intro
 *Simple Script Paradise Island.*
 
-Every Python programmer starts out their Python journey here - simple one-file scripts written purely in Python,
+Every Python programmer starts out their Python journey here - writing simple one-file scripts written purely in Python,
 using only the packages present in the Python Standard Library. 
 
 In Paradise Island, everything is perfect. The weather is a 
-balmy 20C/77F with clear skies all day every day. You sip your pina-colada upon the beach, with nary a worry in your 
-mind, enjoying the occasional gentle sea breeze and a dip in the sea.
+balmy 20°C/77°F with clear skies all day every day. You sip your pina-colada upon the beach, with nary a worry in your 
+mind, enjoying the occasional gentle sea breeze and a dip in the ocean.
 
 Some stay here longer than others. Those learning programming for the first time will enjoy a longer stay than 
 those who come learning Python as an additional language.
@@ -16,7 +16,7 @@ those who come learning Python as an additional language.
 But sooner or later, everyone must leave.
 
 Somewhere out there in the distance is the *Realm of Projects*. A land several hundreds of times larger than Simple Script 
-Paradise, this is where structured project development happens. Multi-file projects, multi-developer projects, 
+Paradise; this is where structured project development happens. Multi-file projects, multi-developer projects, 
 and projects with external dependencies - code written by others, for usage in Python programs, 
 not present in a standard Python installation.
 
@@ -64,21 +64,25 @@ management.
 
 
 ## Prerequisites
-Strictly speaking, there are no prerequisites for this guide. However, since this is aimed at people who want to be able
+
+### Knowledge
+Strictly speaking, there are no knowledge prerequisites for this guide. However, since this is aimed at people who want to be able
 to code more complex Python projects, there are things you should learn first.
 
-### Python
+#### Terminal usage
+Much project set-up occurs via the terminal. You don't need to know much about the terminal for this guide beforehand, as all commands will be explained; but a little experience beforehand (e.g. knowing how to launch it, how to change directories, how to see all files in a directory) will help.
 
-The most obvious of these is Python itself - you should really know enough Python first and be comfortable in coding 
+#### Python
+
+This guide is aimed at Python beginners who are comfortable in coding 
 simple single-file scripts that have no dependencies. 
 
-If you aren't sure what level you are at, then ask yourself the 
+If you aren't sure whether you meet that criteria, then ask yourself the 
 following - can you write a simple terminal calculator app using Python? 
 
-If you can, then great - my guide is for you. 
-If you can't, you should focus on learning enough Python first - any good Python learning resource will do.
+If you can't, you should focus on learning enough Python first before continuing - any good Python learning resource will do.
 
-### Git
+#### Git
 
 The other thing you need to know is version control. 99.9% of the time, this means Git. 
 
@@ -90,7 +94,14 @@ pushing changes to GitHub, fetching updates from a GitHub repo and pulling/mergi
 
 If any of those seem unfamiliar, please seek out and follow any good Git learning resource before proceeding.
 
+### Tools
+Obviously, Python is needed for this guide.
 
+If you are on Windows, simply download the latest version from python.org . Do not install the version from the Microsoft Store.
+
+If you are on Mac/Linux things are a little more complex. These systems come with Python installed, but you should not use them. 
+
+The irony of this is that this guide will show you how to do things the right way, including installing uv where all of this headache just goes away no matter what OS you use. 
 
 
 
