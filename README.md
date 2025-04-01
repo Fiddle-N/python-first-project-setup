@@ -70,7 +70,8 @@ Strictly speaking, there are no knowledge prerequisites for this guide. However,
 to code more complex Python projects, there are things you should learn first.
 
 #### Terminal usage
-Much project set-up occurs via the terminal. You don't need to know much about the terminal for this guide beforehand, as all commands will be explained; but a little experience beforehand (e.g. knowing how to launch it, how to change directories, how to see all files in a directory) will help.
+Much project set-up occurs via the terminal. You don't need to know much about the terminal for this guide beforehand, 
+as all commands will be explained; but a little experience beforehand (e.g. knowing how to launch it, how to change directories, how to see all files in a directory) will help.
 
 #### Python
 
@@ -94,14 +95,38 @@ pushing changes to GitHub, fetching updates from a GitHub repo and pulling/mergi
 
 If any of those seem unfamiliar, please seek out and follow any good Git learning resource before proceeding.
 
-### Tools
-Obviously, Python is needed for this guide.
+## Installing Python
+Install astral's uv following the link here: https://docs.astral.sh/uv/getting-started/installation/ . You can either
+install it using a terminal command or by using your package manager of choice. 
 
-If you are on Windows, simply download the latest version from python.org . Do not install the version from the Microsoft Store.
+Open the terminal in your OS and run the `uv` command to verify that it works.
 
-If you are on Mac/Linux things are a little more complex. These systems come with Python installed, but you should not use them. 
+From there, install Python with the following commands: 
 
-The irony of this is that this guide will show you how to do things the right way, including installing uv where all of this headache just goes away no matter what OS you use. 
+```
+$ uv tool update-shell
+$ uv python install --default --preview
+```
+
+
+Run the `python` command and verify Python is now installed:
+
+```
+$ python
+Python 3.13.2 (main, Mar 17 2025, 21:02:54) [Clang 20.1.0 ] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+```
+
+There are particular reason why we want to install Python this way - later sections will cover this in more detail, but 
+it is sufficient to know the following for now:
+* On macOS and Linux, you can brick your OS if you mess around with the system version of Python. In general, you should
+refrain from using the system version of Python - it exists to run programs for your OS, not to run programs you develop 
+yourself. Installing a separate version of Python is recommended, and doing so through uv is considered safe.
+* For certain Linux distributions, the system version of Python (which, as mentioned above, is not one you should use
+anyway) does not contain pip or venv. We will be using these tools in this article, so we will need a version of Python
+that has them installed
+
 
 
 
