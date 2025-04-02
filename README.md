@@ -130,7 +130,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ## Editor
 The most popular editors for Python are PyCharm
-and Visual Studio Code. That said, for this guide, use a simpler editor to follow along (Notepad/Notepad++ on Windows, TextEdit on plain text mode on macOS, Gedit/Kate on Linux). The later part of this guide will show you how to set up PyCharm and Visual Studio Code with uv.
+and Visual Studio Code. VS Code can be used to follow along; That said, for this guide, you may find it easier to use a simpler editor (Notepad/Notepad++ on Windows, TextEdit on plain text mode on macOS, Gedit/Kate on Linux). The later part of this guide will show you how to set up PyCharm and Visual Studio Code with uv.
 
 ## sys.path - how Python understands imports
 
