@@ -96,6 +96,17 @@ pushing changes to GitHub, fetching updates from a GitHub repo and pulling/mergi
 If any of those seem unfamiliar, please seek out and follow any good Git learning resource before proceeding.
 
 ## Installing Python
+
+If you are interested in this guide, you probably already have Python installed. Even so, I would recommend you install Python through uv. There are particular reasons why we want to install Python this way - later sections will cover this in more detail, but 
+it is sufficient to know the following for now:
+
+* If you are on macOS and Linux, you may currently be using the Python that came with your OS - the system Python. However, you can brick your OS if you mess around with the system Python. In general, you should
+refrain from using it as it exists to run programs for your OS, not to run programs you develop 
+yourself. Installing a separate version of Python is recommended, and doing so through uv is considered safe.
+* For certain Linux distributions (and definitely Ubuntu, the most popular flavour of desktop Linux), the system version of Python (which, as mentioned above, is not one you should use
+anyway) does not contain pip or venv. We will be using these tools in this article, so we will need a version of Python
+that has them installed.
+
 Install astral's uv following the link here: https://docs.astral.sh/uv/getting-started/installation/ . You can either
 install it using a terminal command or by using your package manager of choice. 
 
@@ -108,7 +119,6 @@ $ uv tool update-shell
 $ uv python install --default --preview
 ```
 
-
 Run the `python` command and verify Python is now installed:
 
 ```
@@ -117,16 +127,6 @@ Python 3.13.2 (main, Mar 17 2025, 21:02:54) [Clang 20.1.0 ] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
-
-There are particular reason why we want to install Python this way - later sections will cover this in more detail, but 
-it is sufficient to know the following for now:
-* On macOS and Linux, you can brick your OS if you mess around with the system version of Python. In general, you should
-refrain from using the system version of Python - it exists to run programs for your OS, not to run programs you develop 
-yourself. Installing a separate version of Python is recommended, and doing so through uv is considered safe.
-* For certain Linux distributions, the system version of Python (which, as mentioned above, is not one you should use
-anyway) does not contain pip or venv. We will be using these tools in this article, so we will need a version of Python
-that has them installed
-
 
 
 
