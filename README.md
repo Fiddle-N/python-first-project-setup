@@ -106,6 +106,7 @@ yourself. Installing a separate version of Python is recommended, and doing so t
 * For certain Linux distributions (and definitely Ubuntu, the most popular flavour of desktop Linux), the system version of Python (which, as mentioned above, is not one you should use
 anyway) does not contain pip or venv. We will be using these tools in this article, so we will need a version of Python
 that has them installed.
+* If you are on Windows, sometimes you launch Python through the `python` command; sometimes through the `py` command. Installing through uv means you run through the `python` command, which matches with how macOS/Linux users would. 
 
 Install astral's uv following the link here: https://docs.astral.sh/uv/getting-started/installation/ . You can either
 install it using a terminal command or by using your package manager of choice. 
@@ -132,7 +133,50 @@ Type "help", "copyright", "credits" or "license" for more information.
 The most popular editors for Python are PyCharm
 and Visual Studio Code. VS Code can be used to follow along; That said, for this guide, you may find it easier to use a simpler editor (Notepad/Notepad++ on Windows, TextEdit on plain text mode on macOS, Gedit/Kate on Linux). The later part of this guide will show you how to set up PyCharm and Visual Studio Code with uv.
 
-## sys.path - how Python understands imports
+## The actual meat of the article (working heading)
+
+### Project 1
+
+Launch the terminal - type `cd` to ensure you are in your home area.
+
+Create a folder for our projects - first_project will do.
+
+Inside the folder, create the first folder for the first project - project_1 .
+
+Inside here, we will create three files:
+
+A __init__.py file, which should be left empty
+
+add_file.py
+```py
+def add(x, y):
+    return x + y
+```
+
+run.py
+```py
+import add_file
+
+print(add_file.add(1, 2))
+```
+
+```
+/project_1
+    __init__.py
+    add_file.py
+    run.py
+```
+
+From within the project folder, run the file as so:
+
+```
+[project_1]$ python run.py
+3
+```
+
+This is the simplest multi-file project we can have! But how and why does the import statement find add_file ?
+
+The answer to this is in sys.path:
 
 
 
