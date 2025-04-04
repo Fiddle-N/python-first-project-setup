@@ -144,17 +144,21 @@ Create a folder for our projects - first_project will do.
 Inside the folder, create the first folder for the first project - project_1 .
 
 Inside here, we will create three files:
-
-A __init__.py file, which should be left empty
-
-add_file.py
 ```py
+# __init__.py
+# (leave empty)
+```
+
+```py
+# add_file.py
+
 def add(x, y):
     return x + y
 ```
 
-run.py
 ```py
+# run.py
+
 import add_file
 
 print(add_file.add(1, 2))
