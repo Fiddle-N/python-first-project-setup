@@ -216,3 +216,31 @@ print(subdir.add_file.add(1, 2))
 3
 ```
 
+### Project 3
+This is where things get interesting. 
+
+```
+/project_2
+    / subdir_1
+        __init__.py
+        run.py
+    / subdir_2
+        __init__.py
+        add_file.py
+```
+```py
+# run.py
+
+import subdir_2.add_file
+
+print(subdir_2.add_file.add(1, 2))
+```
+```
+[project_3]$ python subdir_1/run.py
+3
+```
+```
+[project_3]$ cd subdir_1
+[subdir_1]$ python run.py
+```
+
