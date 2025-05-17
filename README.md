@@ -236,10 +236,12 @@ import subdir_2.add_file
 
 print(subdir_2.add_file.add(1, 2))
 ```
+If you run this file from the project folder, it will work fine:
 ```
 [project_3]$ python subdir_1/run.py
 3
 ```
+If however, you tried to run this file whilst being in the subdirectory itself, you get a very different result.
 ```
 [project_3]$ cd subdir_1
 [subdir_1]$ python run.py
@@ -249,4 +251,10 @@ ine 1, in <module>
     import subdir_2.add_file
 ModuleNotFoundError: No module named 'subdir_2'
 ```
+Think back to how Python resolves imports with sys.path . 
+The first element of sys.path represents the current directory. Up until now, because the current directory was the project root directory, Python was able to see all of our code. 
+However, when you change the directory to subdir_1, now we have a problem. add_file.py is in subdir_2, which is no longer in our sys.path . As a result, the code fails to run, as you see above.
 
+What is the takeaway of this? 
+1. Always run code from the project root folder when on the terminal.
+Of course, this means that its best practice to also have the entry point of your project at the top-level directory, like so:
