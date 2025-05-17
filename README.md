@@ -137,7 +137,7 @@ and Visual Studio Code. VS Code can be used to follow along; That said, for this
 
 
 
-### Project 1
+### Project 1 - The Simplest Project
 
 Launch the terminal - type `cd` to ensure you are in your home area.
 
@@ -216,11 +216,11 @@ print(subdir.add_file.add(1, 2))
 3
 ```
 
-### Project 3
+### Project 3 - code in separate sub-directories
 This is where things get interesting. 
 
 ```
-/project_2
+/project_3
     __init__.py
     / subdir_1
         __init__.py
@@ -257,4 +257,15 @@ However, when you change the directory to subdir_1, now we have a problem. add_f
 
 What is the takeaway of this? 
 1. Always run code from the project root folder when on the terminal.
-Of course, this means that its best practice to also have the entry point of your project at the top-level directory, like so:
+Of course, this means that its best practice to also have the entry point of your project at the top-level directory, like project_2 did:
+```
+/project_2
+    __init__.py
+    run.py
+    / subdir
+        __init__.py
+        add_file.py
+```
+That way you don't need to access your entry point by typing in a large path to get to it - you simply run a file that lives in the current directory.
+
+
