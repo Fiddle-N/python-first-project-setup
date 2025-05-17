@@ -243,5 +243,10 @@ print(subdir_2.add_file.add(1, 2))
 ```
 [project_3]$ cd subdir_1
 [subdir_1]$ python run.py
+Traceback (most recent call last):
+  File "/.../projects/project_3/subdir_1/run.py", l
+ine 1, in <module>
+    import subdir_2.add_file
+ModuleNotFoundError: No module named 'subdir_2'
 ```
 
