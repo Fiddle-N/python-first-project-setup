@@ -135,6 +135,8 @@ and Visual Studio Code. VS Code can be used to follow along; That said, for this
 
 ## The actual meat of the article (working heading)
 
+
+
 ### Project 1
 
 Launch the terminal - type `cd` to ensure you are in your home area.
@@ -178,11 +180,17 @@ From within the project folder, run the file as so:
 3
 ```
 
-This is the simplest multi-file project we can have! But how and why does the import statement find add_file ?
+This is the simplest multi-file project we can have. But how and why does the import statement find add_file ?
 
 The answer to this is in sys.path:
-
-
-
+```
+[project_1]$ python -c "import sys; print(sys.path)
+['', ...]
+```
+sys.path is an important attribute to know. In short, it returns a list of paths representing the directories in which Python goes through to look for code to import.
+The paths will look different depending on which OS you run the command on, but regardless the empty string should be the first element in the list.
+The empty string represents your current directory.
+So, that means Python will look in the project_1 directory for code to import, which is why it is able to import add_file.
+Furthermore, because the empty string is the first in the list, Python will look in this directory first before it looks in any others.
 
 
