@@ -193,4 +193,26 @@ The empty string represents your current directory.
 So, that means Python will look in the project_1 directory for code to import, which is why it is able to import add_file.
 Furthermore, because the empty string is the first in the list, Python will look in this directory first before it looks in any others.
 
+### Project 2
+A quick demonstration that Python won't just look in the current directory alone, but in all the subdirectories of the current directory. 
+
+```
+/project_2
+    __init__.py
+    run.py
+    / subdir
+        __init__.py
+        add_file.py
+```
+```py
+# run.py
+
+import subdir.add_file
+
+print(subdir.add_file.add(1, 2))
+```
+```
+[project_2]$ python run.py
+3
+```
 
