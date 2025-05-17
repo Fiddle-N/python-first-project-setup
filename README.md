@@ -221,6 +221,7 @@ This is where things get interesting.
 
 ```
 /project_2
+    __init__.py
     / subdir_1
         __init__.py
         run.py
